@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    body {
+        text-align: center;
+        margin: 5%;
+    }
+#lightB {
+    text-align: center;
+    background-color: black;
+    height: 400px;
+    width: 150px;
+    margin-left: 45%;
+    border-radius: 20px;
+}
+
+.allL {
+    background-color: black;
+    margin: 10px;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+
+}
+
+#stick {
+    background-color: black;
+    height: 200px;  
+    width: 15px;
+    margin-left: 50%;
+}
+#bott {
+    background-color: black;
+    width: 100%;
+    height: 10px;
+}
+/* #yellowL {
+    background-color: yellow;
+} */
+/* #greenL {
+    background-color: green;
+} */
+/* .btnForL {
+    border-radius: 5%;
+    height: 50px;
+    width: 100px;
+    margin-left: 200px;
+    margin-top: 150px;
+    background-color: blue;
+    color:white;
+} */
+
+.btnForL {
+    border-radius: 10%;
+    height: 50px;
+    width: 150px;
+    margin: 5px;
+    color: white;
+    background-color: blue;
+} 
+.btnA {
+flex-direction: column;
+background-color: vert;
+margin-left: 300px;
+margin-top: 50px;
+}
+</style>
+
+<script>
+
+    function allLight() {
+        document.getElementById("redL").style.backgroundColor = "black";
+        document.getElementById("yellowL").style.backgroundColor = "black";
+        document.getElementById("greenL").style.backgroundColor = "black";
+    }
+
+    function redLight() {
+        allLight();
+        document.getElementById("redL").style.backgroundColor = "red";
+    }
+    function yellowLight() {
+        allLight();
+        console.log("kkkk")
+        document.getElementById("yellowL").style.backgroundColor = "yellow";
+    }
+    function greenLight() {
+        allLight();
+        document.getElementById("greenL").style.backgroundColor = "green";
+    }
+</script>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Website</title>
+    <!-- <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon"> -->
+</head>
+
+
+<body>
+    <div id="lightB">
+        <div>
+            <button class="allL" id="redL" onclick="redLight()">
+            </button>
+        </div>
+        <div>
+            <button class="allL" id="yellowL" onclick="yellowLight()">
+            </button>
+        </div>
+        <div>
+            <button  class="allL" id="greenL" onclick="greenLight()">
+            </button>
+        </div>
+        
+        <div class="btnA">
+            <button class="btnForL" onclick="redLight()" > Click For Red </button>
+            <button class="btnForL" onclick="yellowLight()" > Click For Yellow </button>
+            <button class="btnForL" onclick="greenLight()" > Click For Green</button>
+        </div>
+
+        
+
+    </div>
+    <div id="stick">
+    </div>
+    <div id="bott">
+    </div>
+
+    
+</body>
+
+
+</html>
