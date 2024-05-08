@@ -2,10 +2,17 @@
 <html lang="en">
 <style>
     body {
+        position: fixed;
         text-align: center;
-        margin: 5%;
+        margin: 0 auto;
+        
+    }
+    .cont {
+        width: 50%;
     }
 #lightB {
+    position: relative;
+    margin-top: 50px;
     text-align: center;
     background-color: black;
     height: 400px;
@@ -24,14 +31,17 @@
 }
 
 #stick {
+    position: relative;
     background-color: black;
-    height: 200px;  
+    height: 250px;  
     width: 15px;
-    margin-left: 50%;
+    margin: 0 auto;
+    margin-left: 180px;
+    margin-top: -200px;
 }
 #bott {
     background-color: black;
-    width: 100%;
+    width: 200%;
     height: 10px;
 }
 /* #yellowL {
@@ -52,17 +62,29 @@
 
 .btnForL {
     border-radius: 10%;
-    height: 50px;
-    width: 150px;
+    height: 40px;
+    width: 100px;
     margin: 5px;
     color: white;
     background-color: blue;
 } 
 .btnA {
-flex-direction: column;
-background-color: vert;
-margin-left: 300px;
-margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 400px;
+    margin-top: 50px;
+    margin-bottom: -100px;
+
+}
+#A{
+    background-color: red;
+}
+#B{
+    background-color: yellow;
+    color: black;
+}
+#C{
+    background-color: green;
 }
 </style>
 
@@ -101,6 +123,7 @@ margin-top: 50px;
 
 
 <body>
+    <div class="cont">
     <div id="lightB">
         <div>
             <button class="allL" id="redL" onclick="redLight()">
@@ -114,21 +137,19 @@ margin-top: 50px;
             <button  class="allL" id="greenL" onclick="greenLight()">
             </button>
         </div>
-        
-        <div class="btnA">
-            <button class="btnForL" onclick="redLight()" > Click For Red </button>
-            <button class="btnForL" onclick="yellowLight()" > Click For Yellow </button>
-            <button class="btnForL" onclick="greenLight()" > Click For Green</button>
-        </div>
-
-        
-
     </div>
+
+    <div class="btnA">
+        <button class="btnForL" id="A" onclick="redLight()" > Click For Red </button>
+        <button class="btnForL" id="B" onclick="yellowLight()" > Click For Yellow </button>
+        <button class="btnForL" id="C" onclick="greenLight()" > Click For Green</button>
+    </div>
+    
     <div id="stick">
     </div>
     <div id="bott">
     </div>
-
+</div>
     
 </body>
 
